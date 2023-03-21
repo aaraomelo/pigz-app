@@ -1,0 +1,9 @@
+.header {
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background-color: white;
+}
