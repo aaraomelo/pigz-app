@@ -1,10 +1,13 @@
 import React from 'react';
-import './Img.css';
+import './IMG.css';
 
-export default function Img({ className, src, ...rest }) {
-  return <img
-    className={`img ${className}`}
-    src={`${process.env.REACT_APP_IMAGES_PATH}/${src}`}
-    {...rest}
-  />;
+export default function IMG({ className, src, alt, ...rest }) {
+  return (
+    <img
+      className={`img ${className}`}
+      src={`${process.env.REACT_APP_IMAGES_PATH}/${src}`}
+      alt={alt}
+      {...rest}
+    />
+  );
 }

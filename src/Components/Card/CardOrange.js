@@ -1,5 +1,5 @@
 import React from 'react';
-import Img from '../Img';
+import IMG from '../IMG';
 
 export default function CardOrange({ title, body, image }) {
   return (
@@ -10,14 +10,14 @@ export default function CardOrange({ title, body, image }) {
         </h2>
       </header>
       <div className='card-body card-orange-body'>
-        <Img
-          className='card-body-image card-orange-body-image'
-          src={image}
-          alt={title}
-        />
         <p className='card-body-content card-orange-body-content'>
           {body}
         </p>
+        <IMG
+          className='card-body-image card-orange-body-image'
+          src={image}
+          alt={`${title} Pigz - OrangeLabs`}
+        />
       </div>
     </div >
   );
