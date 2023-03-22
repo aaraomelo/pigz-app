@@ -4,9 +4,9 @@ import './Header.css';
 
 export default function Header() {
     return (
-        <header className="header">
+        <header className='header'>
             <SVG.Icon.Logo />
-            <Button>Já sou parceiro</Button>
+            <Button className='button-header'>Já sou parceiro</Button>
         </header>
     );
 }

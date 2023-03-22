@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export default function CardYellow({
   title,
@@ -8,20 +8,20 @@ export default function CardYellow({
   button,
 }) {
   return (
-    <div className="card card-yellow">
-      <div className="card-title card-yellow-title">
+    <div className='card card-yellow'>
+      <div className='card-title card-yellow-title'>
         <h2>{title}</h2>
         <h3>{subtitle}</h3>
       </div>
-      <div className="card-body card-yellow-body">
+      <div className='card-body card-yellow-body'>
         <ul>
           {body.map((line, index) => <li key={index}>{line}</li>)}
         </ul>
       </div>
-      <div className="card-price card-yellow-price">
+      <div className='card-price card-yellow-price'>
         {price}
       </div>
-      <button className="card-button card-yellow-button">
+      <button className='button card-button card-yellow-button'>
         {button}
       </button>
     </div>

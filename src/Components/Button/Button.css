@@ -1,11 +1,8 @@
 .button {
     position: relative;
     border-radius: 32px;
-    padding: 6px 24px;
     background-image: linear-gradient(258deg, #FA641E, #FF881F);
     border-width: 0;
-    font-size: 14px;
-    line-height: 21px;
     letter-spacing: 0px;
     color: white;
 }

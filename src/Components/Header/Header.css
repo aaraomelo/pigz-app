@@ -7,3 +7,9 @@
     padding: 12px 16px;
     background-color: white;
 }
+
+.button-header {
+    padding: 6px 24px;
+    font-size: 14px;
+    line-height: 21px;
+}
