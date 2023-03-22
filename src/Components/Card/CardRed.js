@@ -1,7 +1,7 @@
 import React from "react";
 import SVG from "../SVG";
 
-export default function CardRed({ icon, title, subtitle, body }) {
+export default function CardRed({ icon, title, body }) {
   const Icon = SVG.Icon[icon];
   return (
     <div className="card card-red">

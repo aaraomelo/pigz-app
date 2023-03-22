@@ -8,6 +8,7 @@ export default function App() {
     <div className="App">
       <Header />
       <Card.Group.Red />
+      <Card.Group.Yellow />
       <Footer />
     </div>
   );

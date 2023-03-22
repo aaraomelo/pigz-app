@@ -1,8 +1,9 @@
 import React from "react";
 import CardGroupRed from "./CardGroupRed";
+import CardGroupYellow from "./CardGroupYellow";
 
 export default Object.assign(
-  ({ children, ...rest }) => {
+  ({ children }) => {
     return (
       <div className='card-group'>
         {children}
@@ -10,6 +11,7 @@ export default Object.assign(
     );
   },
   {
-    Red: CardGroupRed
+    Red: CardGroupRed,
+    Yellow: CardGroupYellow,
   }
 );
