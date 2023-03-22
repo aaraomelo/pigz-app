@@ -6,8 +6,12 @@ import { SVGIconGooglePlay } from "./SVGIconGooglePlay";
 import { SVGIconInstagram } from "./SVGIconInstagram";
 import { SVGIconLinkedin } from "./SVGIconLinkedin";
 import { SVGIconLogo } from "./SVGIconLogo";
+import { SVGIconManagement } from "./SVGIconManagement";
 import { SVGIconOrange } from "./SVGIconOrange";
 import { SVGIconPhones } from "./SVGIconPhones";
+import { SVGIconPrint } from "./SVGIconPrint";
+import { SVGIconSmartphone } from "./SVGIconSmartphone";
+import { SVGIconStorefront } from "./SVGIconStorefront";
 import { SVGIconYoutube } from "./SVGIconYoutube";
 
 export default Object.assign(
@@ -28,5 +32,9 @@ export default Object.assign(
     Facebook: SVGIconFacebook,
     Youtube: SVGIconYoutube,
     Orange: SVGIconOrange,
+    Storefront: SVGIconStorefront,
+    Smartphone: SVGIconSmartphone,
+    Management: SVGIconManagement,
+    Print: SVGIconPrint,
   }
 );

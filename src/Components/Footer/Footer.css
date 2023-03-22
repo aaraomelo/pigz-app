@@ -113,3 +113,7 @@
 .footer .contact .contact-title {
     display: flex;
 }
+
+.footer .svg-icon-app-store {
+    margin-right: 10px;
+}
