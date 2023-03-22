@@ -1,0 +1,22 @@
+.carousel-pointers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.carousel-pointer {
+    cursor: pointer;
+    width: 22%;
+    height: 4px;
+    border-radius: 8px;
+}
+
+.carousel-pointer-active {
+    background: #FA641E;
+}
+
+.carousel-pointer-desactive {
+    background: #EEEEEE;
+}

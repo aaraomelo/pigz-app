@@ -4,9 +4,9 @@ import CardGroupRed from "./CardGroupRed";
 import CardGroupYellow from "./CardGroupYellow";
 
 export default Object.assign(
-  ({ children }) => {
+  ({ children, className = '' }) => {
     return (
-      <div className='card-group'>
+      <div className={`card-group ${className}`}>
         {children}
       </div>
     );

@@ -1,5 +1,6 @@
 import React from "react";
 import Card from ".";
+import Carousel from "../Carousel";
 
 const cards = [
   {
@@ -26,12 +27,12 @@ const cards = [
 
 export default function CardGroupOrange() {
   return (
-    <Card.Group>
-      <div className='card-group card-group-orange'>
+    <Card.Group className='card-group-orange'>
+      <Carousel>
         {cards.map((card, index) => (
           <Card.Orange key={index} {...card} />
         ))}
-      </div>
+      </Carousel>
     </Card.Group>
   );
 }
