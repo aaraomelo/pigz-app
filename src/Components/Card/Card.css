@@ -1,0 +1,25 @@
+.card-red {
+    background: #FAFAFA;
+    text-align: center;
+    width: 270px;
+    margin: auto;
+    border-radius: 64px;
+    padding: 40px 0;
+    letter-spacing: 0px;
+}
+
+.card-red:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.card-red-title h2 {
+    font-size: 20px;
+    margin: 0;
+    margin-top: 20px;
+}
+
+.card-red-body {
+    font-size: 16px;
+    margin: 0;
+    margin-top: 8px;
+}

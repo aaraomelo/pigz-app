@@ -1,6 +1,6 @@
 import CardGroup from './CardGroup';
 import CardRed from './CardRed';
-import './CardRed.css';
+import './Card.css';
 
 export default Object.assign({},
     {
