@@ -1,7 +1,7 @@
 import React from 'react';
 import InfoContact from './InfoContact';
-import InfoSupport from './InfoSupport';
 import './Info.css';
+import InfoDisclaimer from './InfoDisclaimer';
 
 export default Object.assign(({ children, className = '' }) => (
   <div className={`info ${className}`}>
@@ -9,5 +9,5 @@ export default Object.assign(({ children, className = '' }) => (
   </div>
 ), {
   Contact: InfoContact,
-  Support: InfoSupport,
+  Disclaimer: InfoDisclaimer,
 });
