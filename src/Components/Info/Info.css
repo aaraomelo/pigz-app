@@ -28,3 +28,19 @@
     margin-right: 7px;
     transform: translateY(3px);
 }
+
+.info-support {
+    padding: 0 64px;
+    text-align: center;
+    color: #333333;
+}
+
+.info-support-body {
+    font-size: 16px;
+    margin: 20px 0 40px 0;
+}
+
+.info-support-title {
+    font-size: 32px;
+    margin: 0;
+}

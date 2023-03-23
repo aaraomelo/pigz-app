@@ -4,7 +4,7 @@ import Carousel from "../Carousel";
 
 const cards = [
   {
-    title: 'Pigz Marketplce',
+    title: 'Pigz Marketplace',
     body: 'Além de uma página exclusiva, com o Pigz Marketplace sua loja terá mais visibilidade, no app e no site. Uma vitrine com milhares de clientes todos os dias, pra vender muito mais.',
     image: 'pigz_marketplace.png',
   },

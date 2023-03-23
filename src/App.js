@@ -10,6 +10,7 @@ export default function App() {
       <Header />
       <Card.Group.Red />
       <Card.Group.Orange />
+      <Info.Support />
       <Card.Group.Yellow />
       <Info.Contact />
       <Footer />
