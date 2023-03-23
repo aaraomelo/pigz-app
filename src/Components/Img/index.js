@@ -1,7 +1,7 @@
 import React from 'react';
 import './IMG.css';
 
-export default function IMG({ className, src, alt, ...rest }) {
+export default function IMG({ className, src, alt = 'pigz', ...rest }) {
   return (
     <img
       className={`img ${className}`}

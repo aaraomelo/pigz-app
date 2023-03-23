@@ -111,6 +111,8 @@
 }
 
 .card-orange-body-image {
+    min-width: 100%;
+    max-width: 100%;
     margin-bottom: -4px;
 }
 
@@ -120,4 +122,12 @@
 
 .card-group-red {
     margin-bottom: 80px;
+    text-align: center;
+}
+
+.card-group-red-title {
+    color: #333333;
+    font-size: 32px;
+    line-height: 37px;
+    margin: 20px 0 40px 0;
 }

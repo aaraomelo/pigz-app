@@ -26,9 +26,12 @@ const cards = [
 export default function CardGroupRed() {
   return (
     <Card.Group className='card-group-red'>
-        {cards.map((card, index) => (
-          <Card.Red key={index} {...card} />
-        ))}
+      <h1 className='card-group-title card-group-red-title'>
+        Você tem um<br />novo Pigzdido!
+      </h1>
+      {cards.map((card, index) => (
+        <Card.Red key={index} {...card} />
+      ))}
     </Card.Group>
   );
 }

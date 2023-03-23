@@ -3,6 +3,7 @@ import Card from './Components/Card';
 import Footer from './Components/Footer';
 import Header from './Components/Header';
 import Info from './Components/Info';
+import Outlet from './Components/Outlet';
 
 const disclaimers = [
   {
@@ -19,6 +20,7 @@ export default function App() {
   return (
     <div className="App">
       <Header />
+      <Outlet />
       <Card.Group.Red />
       <Info.Disclaimer {...disclaimers[0]} />
       <Card.Group.Orange />
