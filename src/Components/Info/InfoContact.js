@@ -2,7 +2,7 @@ import React from 'react';
 import Info from '.';
 import SVG from '../SVG';
 
-export default function InfoContact({ }) {
+export default function InfoContact() {
   return (
     <Info className='info-contact'>
       <span className='info-contact-label'>Fale com a Pigz</span>

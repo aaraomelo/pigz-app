@@ -4,8 +4,11 @@ import { PersistGate } from "redux-persist/integration/react";
 import { getPersistConfig } from "redux-deep-persist";
 import storage from "redux-persist/lib/storage";
 import { Provider } from "react-redux";
+import formReducer from "./form/reducer";
 
-const reducer = combineReducers({});
+const reducer = combineReducers({
+    form: formReducer,
+});
 
 const persistConfig = getPersistConfig({
     key: "root",
