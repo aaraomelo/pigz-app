@@ -2,6 +2,7 @@ import React from "react";
 import SVG from ".";
 import { SVGIconAppStore } from "./SVGIconAppStore";
 import { SVGIconFacebook } from "./SVGIconFacebook";
+import SVGIconFlag from "./SVGIconFlag";
 import { SVGIconGooglePlay } from "./SVGIconGooglePlay";
 import { SVGIconInstagram } from "./SVGIconInstagram";
 import { SVGIconLinkedin } from "./SVGIconLinkedin";
@@ -9,6 +10,7 @@ import { SVGIconLogo } from "./SVGIconLogo";
 import { SVGIconManagement } from "./SVGIconManagement";
 import { SVGIconOrange } from "./SVGIconOrange";
 import { SVGIconPhones } from "./SVGIconPhones";
+import { SVGIconPigz } from "./SVGIconPigz";
 import { SVGIconPrint } from "./SVGIconPrint";
 import { SVGIconSmartphone } from "./SVGIconSmartphone";
 import { SVGIconStorefront } from "./SVGIconStorefront";
@@ -38,5 +40,7 @@ export default Object.assign(
     Management: SVGIconManagement,
     Print: SVGIconPrint,
     Whatsapp: SVGIconWhatsapp,
+    Pigz: SVGIconPigz,
+    Flag: SVGIconFlag,
   }
 );
