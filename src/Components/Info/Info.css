@@ -1,0 +1,30 @@
+.info-contact {
+    text-align: center;
+    margin: 56px 0;
+    color: #333333;
+    font-weight: 600;
+}
+
+.info-contact-label {
+    margin-right: 19px;
+}
+
+.info-contact-label {
+    margin-right: 19px;
+}
+
+.info-contact-label,
+.info-contact-phone-number {
+    font-size: 16px;
+}
+
+.info-contact-phone-prefix {
+    font-size: 13px;
+    margin-right: 4px;
+    padding-top: 3px;
+}
+
+.info-contact-phone .svg-icon-whatsapp {
+    margin-right: 7px;
+    transform: translateY(3px);
+}

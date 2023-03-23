@@ -31,12 +31,10 @@ const cards = [
 
 export default function CardGroupYellow() {
   return (
-    <Card.Group>
-      <div className='card-group card-group-yellow'>
-        {cards.map((card, index) => (
-          <Card.Yellow key={index} {...card} />
-        ))}
-      </div>
+    <Card.Group className='card-group-yellow'>
+      {cards.map((card, index) => (
+        <Card.Yellow key={index} {...card} />
+      ))}
     </Card.Group>
   );
 }

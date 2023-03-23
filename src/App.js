@@ -2,6 +2,7 @@ import './App.css';
 import Card from './Components/Card';
 import Footer from './Components/Footer';
 import Header from './Components/Header';
+import Info from './Components/Info';
 
 export default function App() {
   return (
@@ -10,6 +11,7 @@ export default function App() {
       <Card.Group.Red />
       <Card.Group.Orange />
       <Card.Group.Yellow />
+      <Info.Contact />
       <Footer />
     </div>
   );

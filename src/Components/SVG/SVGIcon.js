@@ -12,6 +12,7 @@ import { SVGIconPhones } from "./SVGIconPhones";
 import { SVGIconPrint } from "./SVGIconPrint";
 import { SVGIconSmartphone } from "./SVGIconSmartphone";
 import { SVGIconStorefront } from "./SVGIconStorefront";
+import { SVGIconWhatsapp } from "./SVGIconWhatsapp";
 import { SVGIconYoutube } from "./SVGIconYoutube";
 
 export default Object.assign(
@@ -36,5 +37,6 @@ export default Object.assign(
     Smartphone: SVGIconSmartphone,
     Management: SVGIconManagement,
     Print: SVGIconPrint,
+    Whatsapp: SVGIconWhatsapp,
   }
 );

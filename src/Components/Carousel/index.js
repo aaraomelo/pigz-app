@@ -17,9 +17,10 @@ export default function Carousel({ children, className = '' }) {
       </div>
       <div className={`carousel-frames`}>
         {Children.map(children, (child, index) => (
-          <div key={index} className={'carousel-frame'}>
-            {target(index) ? child : Fragment}
-          </div>
+          !target(index) ? <Fragment key={index} /> :
+            <div key={index} className={'carousel-frame'}>
+              {child}
+            </div>
         ))}
       </div>
     </div>

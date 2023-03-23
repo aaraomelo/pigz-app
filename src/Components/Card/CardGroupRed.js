@@ -25,12 +25,10 @@ const cards = [
 
 export default function CardGroupRed() {
   return (
-    <Card.Group>
-      <div className='card-group card-group-red'>
+    <Card.Group className='card-group-red'>
         {cards.map((card, index) => (
           <Card.Red key={index} {...card} />
         ))}
-      </div>
     </Card.Group>
   );
 }
