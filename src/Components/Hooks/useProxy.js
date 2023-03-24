@@ -1,9 +1,11 @@
-import useStore from './useStore';
+import { store } from '../../Store';
 import { filterSchema } from '../../utils';
 
 export default function useProxy(Element, p) {
   return (function ElementProxy(pointer) {
-    const { properties } = useStore(pointer);
+    const { properties } = pointer
+      .split(".")
+      .reduce((acc, acv) => acc[acv], store.getState());
     const obj = filterSchema(properties,
       (key) => properties[key].type === 'object'
     );

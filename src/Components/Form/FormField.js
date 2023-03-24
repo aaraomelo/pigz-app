@@ -3,10 +3,18 @@ import { generateClassName } from "../../utils";
 import useStore from "../Hooks/useStore";
 
 export default function FormField({ pointer, ...rest }) {
-  const { placeholder } = useStore(pointer);
+  const field = useStore(pointer);
+  const { placeholder, state: value = '' } = field;
   const control = {
     placeholder,
-    ...rest
+    value,
+    onChange: (e) => {
+      field[pointer] = {
+        type: 'setFormField',
+        payload: e.target.value
+      }
+    },
+    ...rest,
   };
   return (
     <Form.Control
