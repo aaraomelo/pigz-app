@@ -13,7 +13,7 @@ const reducer = combineReducers({
 const persistConfig = getPersistConfig({
     key: "root",
     storage,
-    blacklist: [],
+    whitelist: [],
     rootReducer: reducer,
 });
 

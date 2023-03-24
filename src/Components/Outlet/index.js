@@ -1,8 +1,11 @@
+import useForm from '../Hooks/useForm';
 import IMG from '../IMG';
 import SVG from '../SVG';
 import './Outlet.css';
 
 export default function Outlet() {
+  const Form = useForm();
+  // console.log(Form());
   return (
     <div className='outlet'>
       <header className='outlet-header'>
@@ -16,6 +19,7 @@ export default function Outlet() {
       </header>
       <div className='outlet-body'>
         Temos uma equipe ansiosa para cadastrar seus produtos no Pigz Marketplace e deixar sua loja prontinha para iniciar as vendas.
+        <Form.Store.Profile />
       </div>
       <footer className='outlet-footer'>
         <SVG.Icon.Pigz />
