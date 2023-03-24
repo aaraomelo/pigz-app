@@ -8,20 +8,15 @@ export default function FormObject({ pointer }) {
     (key) => properties[key].type !== 'object'
   );
   return (
-    <Form
-      className={generateClassName('form', pointer)}
-    >
-      <Form.Title pointer={pointer} />
-      {Object.keys(data).map((property) => {
-        const { inputType } = data[property];
-        return (
-          <Form.Input
-            key={property}
-            inputType={inputType}
-            pointer={`${pointer}.properties.${property}`}
-          />
-        );
-      })}
+    <Form className={generateClassName('form', pointer)}>
+      <Form.Header pointer={pointer} />
+      {Object.keys(data).map((property) => (
+        <Form.Input
+          key={property}
+          inputType={data[property].inputType}
+          pointer={`${pointer}.properties.${property}`}
+        />
+      ))}
       {actions.map((_, index) => (
         <Form.Action
           key={index}

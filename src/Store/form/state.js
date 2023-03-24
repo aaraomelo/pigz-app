@@ -1,6 +1,7 @@
 export const FormInitialState = {
   "type": "object",
-  "title": "Cadastro do cliente",
+  "title": "Quero vender no Pigz",
+  "subtitle": "Dê o primeiro passo para aumentar suas vendas",
   "description": "Cadastro do cliente",
   "properties": {
     "name": {
@@ -37,6 +38,7 @@ export const FormInitialState = {
       "properties": {
         "address": {
           "type": "object",
+          "title": "Onde fica a sua loja?",
           "description": "Endereço da loja",
           "properties": {
             "cep": {
@@ -141,6 +143,7 @@ export const FormInitialState = {
         },
         "profile": {
           "type": "object",
+          "title": "Me conta um pouco sobre a sua loja",
           "description": "Perfil da loja",
           "properties": {
             "name": {
