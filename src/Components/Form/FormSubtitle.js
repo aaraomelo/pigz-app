@@ -1,6 +1,6 @@
 import { Fragment } from "react";
+import { useStore } from "react-redux";
 import { generateClassName } from "../../utils";
-import { useStore } from "../Hooks/useStore";
 
 export default function FormSubtitle({ pointer, ...rest }) {
   const { subtitle } = useStore(pointer);

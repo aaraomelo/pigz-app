@@ -1,5 +1,5 @@
 import Button from "../Button";
-import { useStore } from "../Hooks/useStore";
+import useStore from "../Hooks/useStore";
 
 export default function FormAction({
   className,

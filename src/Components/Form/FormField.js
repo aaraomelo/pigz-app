@@ -1,6 +1,6 @@
 import Form from ".";
 import { generateClassName } from "../../utils";
-import { useStore } from "../Hooks/useStore";
+import useStore from "../Hooks/useStore";
 
 export default function FormField({ pointer, ...rest }) {
   const { placeholder } = useStore(pointer);

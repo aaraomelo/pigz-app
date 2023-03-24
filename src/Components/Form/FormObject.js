@@ -1,6 +1,6 @@
 import Form from ".";
 import { filterSchema, generateClassName } from "../../utils";
-import { useStore } from "../Hooks/useStore";
+import useStore from "../Hooks/useStore";
 
 export default function FormObject({ pointer }) {
   const { properties, actions } = useStore(pointer);

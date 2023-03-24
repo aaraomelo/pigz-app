@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import Form from ".";
 import { generateClassName, numberNames } from "../../utils";
 import Dropdown from "../Dropdown";
-import { useStore } from "../Hooks/useStore";
+import useStore from "../Hooks/useStore";
 
 export default function FormDropdown({ pointer, ...rest }) {
   const { placeholder, enum: en } = useStore(pointer);
