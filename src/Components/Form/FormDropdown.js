@@ -37,7 +37,9 @@ export default function FormDropdown({ pointer, ...rest }) {
 
   return (
     <Dropdown {...dropdownControl}>
+      <Form.Label pointer={pointer} />
       <Form.Control {...inputControl} />
+      <Form.Message pointer={pointer} />
     </Dropdown>
   );
 }

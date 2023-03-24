@@ -35,10 +35,9 @@
 
 .outlet-footer {
     text-align: center;
-    height: 0;
-
+    height: 100px;
 }
 
 .outlet-footer .svg-icon-pigz {
-    transform: translateY(-65px);
+    transform: translateY(5px);
 }

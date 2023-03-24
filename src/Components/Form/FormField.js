@@ -23,11 +23,13 @@ export default function FormField({ pointer, ...rest }) {
   };
   return (
     <div className={generateClassName('form-field', pointer)}>
+      <Form.Label pointer={pointer} />
       <Form.Control
         className={generateClassName('form-control', pointer)}
         {...control}
         {...rest}
       />
+      <Form.Message pointer={pointer} />
     </div>
 
   );

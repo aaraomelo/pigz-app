@@ -4,6 +4,8 @@ import FormDropdown from "./FormDropdown";
 import FormField from "./FormField";
 import FormHeader from "./FormHeader";
 import FormInput from "./FormInput";
+import FormLabel from "./FormLabel";
+import FormMessage from "./FormMessage";
 import FormObject from "./FormObject";
 import FormSubtitle from "./FormSubtitle";
 import FormTitle from "./FormTitle";
@@ -27,6 +29,8 @@ export default Object.assign(
     Dropdown: FormDropdown,
     Action: FormAction,
     Title: FormTitle,
+    Label: FormLabel,
+    Message: FormMessage,
     Subtitle: FormSubtitle,
     Header: FormHeader,
   }

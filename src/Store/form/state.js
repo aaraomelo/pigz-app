@@ -19,7 +19,8 @@ export const FormInitialState = {
       "description": "Email do cliente",
       "placeholder": "leonercio.goesfeeld@email.com",
       "validation": {
-        "required": true
+        "required": true,
+        "pattern": '^(([^<>()[\\]\\\\.,;:\\s@"]+(\\.[^<>()[\\]\\\\.,;:\\s@"]+)*)|.(".+"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$'
       }
     },
     "phone": {
@@ -29,7 +30,8 @@ export const FormInitialState = {
       "placeholder": "(95) 99876-5432",
       "mask": "phone",
       "validation": {
-        "required": true
+        "required": true,
+        "pattern": '^[1-9]{2}9[7-9]{1}[0-9]{3}[0-9]{4}$',
       }
     },
     "store": {
@@ -48,7 +50,8 @@ export const FormInitialState = {
               "placeholder": "00000-00",
               "mask": "cep",
               "validation": {
-                "required": true
+                "required": true,
+                "pattern": '^[0-9]{5}[0-9]{3}'
               }
             },
             "state": {
@@ -163,7 +166,8 @@ export const FormInitialState = {
               "placeholder": "12.345.678/0001-99",
               "mask": "cnpj",
               "validation": {
-                "required": true
+                "required": true,
+                "pattern": '[0-9]{2}?[0-9]{3}?[0-9]{3}?[0-9]{4}?[0-9]{2}'
               }
             },
             "type": {
