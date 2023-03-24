@@ -52,6 +52,20 @@ export const FormInitialState = {
               "validation": {
                 "required": true,
                 "pattern": '^[0-9]{5}[0-9]{3}'
+              },
+              "inputType": "postal",
+              "$bind": {
+                "type": "object",
+                "description": "Conexão com o formulário de endereço",
+                "pointer": "form.properties.store.address",
+                "properties": {
+                  "postalCode": "{cep}",
+                  "city": "{city}",
+                  "state": "{state}",
+                  "street": "{address}",
+                  "number": "{number}",
+                  "complement": "{complement}"
+                }
               }
             },
             "state": {
@@ -106,7 +120,7 @@ export const FormInitialState = {
                 "Boa Vista"
               ]
             },
-            "street": {
+            "address": {
               "type": "string",
               "title": "Endereço",
               "description": "Endereço",

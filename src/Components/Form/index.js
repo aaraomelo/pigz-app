@@ -7,6 +7,7 @@ import FormInput from "./FormInput";
 import FormLabel from "./FormLabel";
 import FormMessage from "./FormMessage";
 import FormObject from "./FormObject";
+import FormPostal from "./FormPostal";
 import FormSubtitle from "./FormSubtitle";
 import FormTitle from "./FormTitle";
 
@@ -33,5 +34,6 @@ export default Object.assign(
     Message: FormMessage,
     Subtitle: FormSubtitle,
     Header: FormHeader,
+    Postal: FormPostal,
   }
 );

@@ -8,6 +8,8 @@ export default function FormInput({
   switch (inputType) {
     case 'text':
       return <Form.Field {...rest} />;
+    case 'postal':
+      return <Form.Postal {...rest} />;
     case 'dropdown':
       return <Form.Dropdown {...rest} />;
     default:

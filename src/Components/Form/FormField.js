@@ -1,9 +1,10 @@
+import { forwardRef } from "react";
 import Form from ".";
 import { mask } from "../../Store/masks";
 import { generateClassName } from "../../utils";
 import useStore from "../Hooks/useStore";
 
-export default function FormField({ pointer, ...rest }) {
+const FormField = forwardRef(({ pointer, ...rest }, ref) => {
   const field = useStore(pointer);
   const {
     placeholder,
@@ -25,6 +26,7 @@ export default function FormField({ pointer, ...rest }) {
     <div className={generateClassName('form-field', pointer)}>
       <Form.Label pointer={pointer} />
       <Form.Control
+        ref={ref}
         className={generateClassName('form-control', pointer)}
         {...control}
         {...rest}
@@ -33,5 +35,6 @@ export default function FormField({ pointer, ...rest }) {
     </div>
 
   );
-}
+})
 
+export default FormField;
