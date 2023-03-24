@@ -1,8 +1,11 @@
 import { useDispatch, useSelector } from "react-redux";
 
-export function useStore() {
+export function useStore(pointer) {
   const [state] = [
-    useSelector((state) => state),
+    useSelector((state) => !pointer ? state : pointer
+      .split(".")
+      .reduce((acc, acv) => acc[acv], state)
+    ),
     useDispatch(),
   ];
   return new Proxy(state, {
