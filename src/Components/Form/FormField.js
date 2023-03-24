@@ -1,12 +1,17 @@
 import Form from ".";
+import { mask } from "../../Store/masks";
 import { generateClassName } from "../../utils";
 import useStore from "../Hooks/useStore";
 
 export default function FormField({ pointer, ...rest }) {
   const field = useStore(pointer);
-  const { placeholder, state: value = '' } = field;
+  const {
+    placeholder,
+    state: value = '',
+    mask: m = 'default'
+  } = field;
   const control = {
-    value,
+    value: mask[m](value),
     onChange: (e) => {
       e.preventDefault();
       field[pointer] = {

@@ -46,7 +46,7 @@ export const FormInitialState = {
               "title": "CEP",
               "description": "CEP",
               "placeholder": "00000-00",
-              "mask": "phone",
+              "mask": "cep",
               "validation": {
                 "required": true
               }
