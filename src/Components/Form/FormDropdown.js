@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Form from ".";
 import { generateClassName, numberNames } from "../../utils";
 import Dropdown from "../Dropdown";
@@ -5,18 +6,36 @@ import { useStore } from "../Hooks/useStore";
 
 export default function FormDropdown({ pointer, ...rest }) {
   const { placeholder, enum: en } = useStore(pointer);
-  const list = en.map((value, index) => {
-    return {
-      name: numberNames[index],
-      value
-    }
-  })
+  const [open, setOpen] = useState(false);
+  const [state, setState] = useState('');
+
+  const dropdownControl = {
+    className: generateClassName('form-dropdown', pointer),
+    open,
+    list: en
+      .map((value, index) => ({
+        index,
+        name: numberNames[index],
+        value
+      }))
+      .filter((item) => item.value.includes(state)),
+    select: (index) => {
+      setState(en[index])
+      setOpen(false);
+    },
+  }
+
+  const inputControl = {
+    className: generateClassName('form-control', pointer),
+    placeholder,
+    value: state,
+    onChange: (e) => { setState(e.target.value) },
+    onFocus: () => { setOpen(true) },
+  }
+
   return (
-    <Dropdown
-      list={list}
-      className={generateClassName('form-dropdown', pointer)}
-    >
-      <Form.Control className={generateClassName('form-control', pointer)} />
+    <Dropdown {...dropdownControl}>
+      <Form.Control {...inputControl} />
     </Dropdown>
   );
 }
