@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 
-export function useStore(pointer) {
+export default function useStore(pointer) {
   const [state] = [
     useSelector((state) => !pointer ? state : pointer
       .split(".")
