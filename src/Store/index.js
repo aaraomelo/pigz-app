@@ -7,6 +7,7 @@ import { Provider } from "react-redux";
 import formReducer from "./form/reducer";
 import flowReducer from "./flow/reducer";
 import messagesReducer from "./messages/reducer";
+import { formMiddleware } from "./form/middleware";
 
 const reducer = combineReducers({
     form: formReducer,
@@ -25,6 +26,10 @@ const persistedReducer = persistReducer(persistConfig, reducer);
 
 export const store = configureStore({
     reducer: persistedReducer,
+    middleware: (getDefaultMiddleware) =>
+        getDefaultMiddleware({
+            serializableCheck: false,
+        }).concat(formMiddleware),
 });
 
 const persistor = persistStore(store);

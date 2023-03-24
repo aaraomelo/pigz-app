@@ -117,7 +117,7 @@ export const FormInitialState = {
             },
             "number": {
               "type": "string",
-              "title": "Endereço",
+              "title": "Número",
               "description": "Número",
               "placeholder": "123",
               "validation": {
@@ -192,7 +192,7 @@ export const FormInitialState = {
               "type": "sendForm",
               "title": "Concluir",
               "payload": {
-                "pointer": "form"
+                "pointer": "form.state"
               }
             }
           ]

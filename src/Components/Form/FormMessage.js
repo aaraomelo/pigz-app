@@ -6,13 +6,13 @@ export default function FormMessage({ pointer, lang = 'pt', ...rest }) {
   const translator = useStore('messages')[lang];
   const messages = validator.map(
     (message) => translator[message]
-  )
+  );
   return (
     <p
       className={generateClassName('form-message', pointer)}
       {...rest}
     >
-      {messages[0] ?? ''}
+      {messages[0]}
     </p>
   );
 }
