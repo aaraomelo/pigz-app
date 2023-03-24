@@ -35,47 +35,6 @@ export const FormInitialState = {
       "type": "object",
       "description": "Cadastro da loja",
       "properties": {
-        "profile": {
-          "type": "object",
-          "description": "Perfil da loja",
-          "properties": {
-            "name": {
-              "type": "string",
-              "title": "Nome da loja",
-              "description": "Nome da loja",
-              "placeholder": "Restaurante Todo Mundo Gosta",
-              "validation": {
-                "required": true
-              }
-            },
-            "cnpj": {
-              "type": "string",
-              "title": "CNPJ da loja",
-              "description": "CNPJ",
-              "placeholder": "12.345.678/0001-99",
-              "mask": "cnpj",
-              "validation": {
-                "required": true
-              }
-            },
-            "type": {
-              "type": "string",
-              "title": "Tipo de loja",
-              "description": "Tipo de loja",
-              "placeholder": "Selecione",
-              "validation": {
-                "required": true
-              },
-              "inputType": "dropdown",
-              "enum": [
-                "Restaurante",
-                "Pizzaria",
-                "Sorveteria",
-                "Papelaria"
-              ]
-            }
-          }
-        },
         "address": {
           "type": "object",
           "description": "Endereço da loja",
@@ -169,10 +128,79 @@ export const FormInitialState = {
                 "required": false
               }
             }
-          }
+          },
+          "action": [
+            {
+              "type": "sendFormData",
+              "title": "Próximo",
+              "payload": {
+                "pointer": "form"
+              }
+            }
+          ]
+        },
+        "profile": {
+          "type": "object",
+          "description": "Perfil da loja",
+          "properties": {
+            "name": {
+              "type": "string",
+              "title": "Nome da loja",
+              "description": "Nome da loja",
+              "placeholder": "Restaurante Todo Mundo Gosta",
+              "validation": {
+                "required": true
+              }
+            },
+            "cnpj": {
+              "type": "string",
+              "title": "CNPJ da loja",
+              "description": "CNPJ",
+              "placeholder": "12.345.678/0001-99",
+              "mask": "cnpj",
+              "validation": {
+                "required": true
+              }
+            },
+            "type": {
+              "type": "string",
+              "title": "Tipo de loja",
+              "description": "Tipo de loja",
+              "placeholder": "Selecione",
+              "validation": {
+                "required": true
+              },
+              "inputType": "dropdown",
+              "enum": [
+                "Restaurante",
+                "Pizzaria",
+                "Sorveteria",
+                "Papelaria"
+              ]
+            }
+          },
+          "action": [
+            {
+              "type": "setFlowStep",
+              "title": "Concluir",
+              "payload": {
+                "pointer": "flow",
+                "value": "next"
+              }
+            }
+          ]
         }
       }
     }
-  }
-
+  },
+  "action": [
+    {
+      "type": "setFlowStep",
+      "title": "Continuar",
+      "payload": {
+        "pointer": "flow",
+        "value": "next"
+      }
+    }
+  ]
 };

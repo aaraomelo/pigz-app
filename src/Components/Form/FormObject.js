@@ -3,10 +3,12 @@ import { filterSchema, generateClassName } from "../../utils";
 import { useStore } from "../Hooks/useStore";
 
 export default function FormObject({ pointer }) {
-  const { properties } = useStore(pointer);
+  const { properties, action } = useStore(pointer);
   const data = filterSchema(properties,
     (key) => properties[key].type !== 'object'
   );
+
+  console.log(action);
   return (
     <Form
       className={generateClassName('form', pointer)}
@@ -21,6 +23,13 @@ export default function FormObject({ pointer }) {
           />
         );
       })}
+      {action.map((act, index) => (
+        <Form.Action
+          key={index}
+          action={act}
+          className={generateClassName('form-action', pointer)}
+        />
+      ))}
     </Form>
   );
 }

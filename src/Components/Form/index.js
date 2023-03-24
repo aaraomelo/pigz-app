@@ -1,3 +1,4 @@
+import FormAction from "./FormAction";
 import FormControl from "./FormControl";
 import FormDropdown from "./FormDropdown";
 import FormField from "./FormField";
@@ -6,7 +7,12 @@ import FormObject from "./FormObject";
 
 export default Object.assign(
   ({ children, className }) => (
-    <form className={`form ${className}`}>
+    <form
+      className={`form ${className}`}
+      onSubmit={(e) => {
+        e.preventDefault();
+      }}
+    >
       {children}
     </form>
   ),
@@ -16,5 +22,6 @@ export default Object.assign(
     Field: FormField,
     Input: FormInput,
     Dropdown: FormDropdown,
+    Action: FormAction,
   }
 );
