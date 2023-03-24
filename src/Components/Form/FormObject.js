@@ -11,12 +11,16 @@ export default function FormObject({ pointer }) {
     <Form
       className={generateClassName('form', pointer)}
     >
-      {Object.keys(data).map((property) =>
-        <Form.Input
-          key={property}
-          pointer={`${pointer}.properties.${property}`}
-        />
-      )}
+      {Object.keys(data).map((property) => {
+        const { inputType } = data[property];
+        return (
+          <Form.Input
+            key={property}
+            inputType={inputType}
+            pointer={`${pointer}.properties.${property}`}
+          />
+        );
+      })}
     </Form>
   );
 }

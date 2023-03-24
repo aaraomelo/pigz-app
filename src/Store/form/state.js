@@ -66,6 +66,7 @@ export const FormInitialState = {
               "validation": {
                 "required": true
               },
+              "inputType": "dropdown",
               "enum": [
                 "Restaurante",
                 "Pizzaria",
@@ -97,6 +98,7 @@ export const FormInitialState = {
               "validation": {
                 "required": true
               },
+              "inputType": "dropdown",
               "enum": [
                 "AC",
                 "AL",
@@ -134,7 +136,11 @@ export const FormInitialState = {
               "placeholder": "Selecione",
               "validation": {
                 "required": true
-              }
+              },
+              "inputType": "dropdown",
+              "enum": [
+                "Boa Vista"
+              ]
             },
             "street": {
               "type": "string",
