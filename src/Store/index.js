@@ -6,10 +6,12 @@ import storage from "redux-persist/lib/storage";
 import { Provider } from "react-redux";
 import formReducer from "./form/reducer";
 import flowReducer from "./flow/reducer";
+import messagesReducer from "./messages/reducer";
 
 const reducer = combineReducers({
     form: formReducer,
     flow: flowReducer,
+    messages: messagesReducer,
 });
 
 const persistConfig = getPersistConfig({

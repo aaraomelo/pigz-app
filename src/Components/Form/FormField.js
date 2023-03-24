@@ -22,11 +22,14 @@ export default function FormField({ pointer, ...rest }) {
     placeholder,
   };
   return (
-    <Form.Control
-      className={generateClassName('form-control', pointer)}
-      {...control}
-      {...rest}
-    />
+    <div className={generateClassName('form-field', pointer)}>
+      <Form.Control
+        className={generateClassName('form-control', pointer)}
+        {...control}
+        {...rest}
+      />
+    </div>
+
   );
 }
 
