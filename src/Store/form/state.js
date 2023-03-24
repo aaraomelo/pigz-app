@@ -129,7 +129,7 @@ export const FormInitialState = {
               }
             }
           },
-          "action": [
+          "actions": [
             {
               "type": "sendFormData",
               "title": "Próximo",
@@ -179,7 +179,7 @@ export const FormInitialState = {
               ]
             }
           },
-          "action": [
+          "actions": [
             {
               "type": "setFlowStep",
               "title": "Concluir",
@@ -193,7 +193,7 @@ export const FormInitialState = {
       }
     }
   },
-  "action": [
+  "actions": [
     {
       "type": "setFlowStep",
       "title": "Continuar",
