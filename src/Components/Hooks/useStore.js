@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { setFlowStep } from "../../Store/flow/action";
 import { setFormField } from "../../Store/form/action";
+import { sendForm } from "../../Store/form/actionCreators";
 
 export const actions = {
   flow: {
@@ -8,6 +9,7 @@ export const actions = {
   },
   form: {
     setFormField,
+    sendForm,
   },
 };
 

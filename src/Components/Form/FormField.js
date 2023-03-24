@@ -6,20 +6,21 @@ export default function FormField({ pointer, ...rest }) {
   const field = useStore(pointer);
   const { placeholder, state: value = '' } = field;
   const control = {
-    placeholder,
     value,
     onChange: (e) => {
+      e.preventDefault();
       field[pointer] = {
         type: 'setFormField',
         payload: e.target.value
       }
     },
-    ...rest,
+    placeholder,
   };
   return (
     <Form.Control
       className={generateClassName('form-control', pointer)}
       {...control}
+      {...rest}
     />
   );
 }

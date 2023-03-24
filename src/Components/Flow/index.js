@@ -1,23 +1,33 @@
-import React, { Children, Fragment, useState } from 'react';
+import React, { Children, Fragment } from 'react';
+import useStore from '../Hooks/useStore';
 import './Flow.css';
 
 export default function Flow({ children, className = '', pointer }) {
-  const [currentFrame, setCurrentFrame] = useState(0);
-  const target = (index) => index === currentFrame;
+  const flow = useStore(pointer);
+  const { state = 0 } = flow;
+  const control = (index) => ({
+    onClick: (e) => {
+      e.preventDefault();
+      flow[pointer] = {
+        type: 'setFlowStep',
+        payload: index,
+      }
+    }
+  });
   return (
     <div className={`flow ${className}`}>
       <div className={`flow-pointers`}>
         {[...Array(children.length).keys()].map((index) => (
           <div
             key={index}
-            className={`flow-pointer flow-pointer-${target(index) ? 'active' : 'desactive'}`}
-            onClick={() => { setCurrentFrame(index) }}
+            className={`flow-pointer flow-pointer-${state === index ? 'active' : 'desactive'}`}
+            {...control(index)}
           />
         ))}
       </div>
       <div className={`flow-frames`}>
         {Children.map(children, (child, index) => (
-          !target(index) ? <Fragment key={index} /> :
+          state !== index ? <Fragment key={index} /> :
             <div key={index} className={'flow-frame'}>
               {child}
             </div>

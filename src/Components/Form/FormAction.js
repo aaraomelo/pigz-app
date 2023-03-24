@@ -7,11 +7,28 @@ export default function FormAction({
   index,
   ...rest
 }) {
-  const { actions } = useStore(pointer);
-  const { title } = actions[index];
+  const field = useStore(pointer);
+  const {
+    type,
+    title,
+    payload: {
+      pointer: p,
+      value
+    }
+  } = field.actions[index];
+  const control = {
+    onClick: (e) => {
+      e.preventDefault();
+      field[p] = {
+        type,
+        payload: value,
+      }
+    }
+  };
   return (
     <Button
       className={`form-action ${className}`}
+      {...control}
       {...rest}
     >
       {title}

@@ -133,10 +133,11 @@ export const FormInitialState = {
           },
           "actions": [
             {
-              "type": "sendFormData",
+              "type": "setFlowStep",
               "title": "Próximo",
               "payload": {
-                "pointer": "form"
+                "pointer": "flow.properties.form",
+                "value": 2
               }
             }
           ]
@@ -184,11 +185,10 @@ export const FormInitialState = {
           },
           "actions": [
             {
-              "type": "setFlowStep",
+              "type": "sendForm",
               "title": "Concluir",
               "payload": {
-                "pointer": "flow",
-                "value": "next"
+                "pointer": "form"
               }
             }
           ]
@@ -201,8 +201,8 @@ export const FormInitialState = {
       "type": "setFlowStep",
       "title": "Continuar",
       "payload": {
-        "pointer": "flow",
-        "value": "next"
+        "pointer": "flow.properties.form",
+        "value": 1
       }
     }
   ]
