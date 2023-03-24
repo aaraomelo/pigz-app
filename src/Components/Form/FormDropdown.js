@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Form from ".";
 import { generateClassName, numberNames } from "../../utils";
 import Dropdown from "../Dropdown";
@@ -8,7 +8,7 @@ export default function FormDropdown({ pointer, ...rest }) {
   const { placeholder, enum: en } = useStore(pointer);
   const [open, setOpen] = useState(false);
   const [state, setState] = useState('');
-
+  const ref = useRef();
   const dropdownControl = {
     className: generateClassName('form-dropdown', pointer),
     open,
@@ -23,9 +23,11 @@ export default function FormDropdown({ pointer, ...rest }) {
       setState(en[index])
       setOpen(false);
     },
+    width: ref?.current?.offsetWidth
   }
 
   const inputControl = {
+    ref,
     className: generateClassName('form-control', pointer),
     placeholder,
     value: state,

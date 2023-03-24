@@ -6,11 +6,15 @@ export default function Dropdown({
   list,
   open,
   select,
+  width,
 }) {
   return (
     <div className={`dropdown ${className}`}>
       {children}
-      <ul className={`dropdown-list dropdown-list-${open ? 'open' : 'close'}`}>
+      <ul
+        className={`dropdown-list dropdown-list-${open ? 'open' : 'close'}`}
+        style={{ width }}
+      >
         {list.map(({ index, name, value }) =>
           <li
             key={index}

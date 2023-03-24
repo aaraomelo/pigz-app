@@ -1,10 +1,14 @@
+import { forwardRef } from "react";
 
-export default function FormControl({ className, ...rest }) {
+const FormControl = forwardRef(({ className, ...rest }, ref) => {
   return (
     <input
+      ref={ref}
       className={`form-control ${className}`}
       {...rest}
     />
-  );
-}
+  )
+});
+
+export default FormControl;
 
