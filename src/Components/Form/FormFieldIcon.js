@@ -6,9 +6,9 @@ import SVG from "../SVG";
 
 const FormFieldIcon = forwardRef((props, ref) => {
   const { pointer } = props
-  const { enum: en, state = '', icon = [] } = useStore(pointer);
+  const { enum: en, state = '', icon } = useStore(pointer);
   const index = en.findIndex((v) => v === state);
-  const Icon = (index === -1) ? Fragment : icon[index]
+  const Icon = (!icon || index === -1) ? Fragment : icon[index]
     .split('.')
     .reduce((acc, acv) => acc[acv], SVG);
   return (

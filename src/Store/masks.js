@@ -54,6 +54,14 @@ function unmaskCountryCode(value) {
   return code;
 }
 
+function maskUf(value) {
+  var uf = value
+    .substring(0, 2)
+    .replace(/\W/g, '')
+    .toUpperCase();
+  return uf;
+}
+
 const defaultMask = (value) => value;
 
 export const mask = Object.assign({}, {
@@ -61,6 +69,7 @@ export const mask = Object.assign({}, {
   cep: maskCEP,
   phone: maskPhone,
   countryCode: maskCountryCode,
+  uf: maskUf,
   default: defaultMask,
 });
 
@@ -69,5 +78,6 @@ export const unmask = Object.assign({}, {
   cep: unmaskCEP,
   phone: unmaskPhone,
   countryCode: unmaskCountryCode,
+  uf: defaultMask,
   default: defaultMask,
 });

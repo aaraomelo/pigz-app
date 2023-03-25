@@ -104,6 +104,7 @@ export const FormInitialState = {
               "validation": {
                 "required": true
               },
+              "mask": "uf",
               "inputType": "dropdown",
               "enum": [
                 "AC",
