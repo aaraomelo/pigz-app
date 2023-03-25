@@ -29,14 +29,17 @@
   margin-bottom: 4px;
 }
 
-.form-control {
-  border-radius: 16px;
+.form-control:not(.form-control-country) {
   border: 1px solid #999999;
   padding: 14px 16px;
   width: -webkit-fill-available;
 }
 
-.form-control:focus-visible {
+.form-control:not(.form-control-country, .form-control-phone) {
+  border-radius: 16px;
+}
+
+.form-control:not(.form-control-country):focus-visible {
   outline: 0.75px solid #999999;
 }
 
@@ -68,13 +71,129 @@
   font-weight: 600;
 }
 
+
+.form-label-phone {
+  margin-left: -100px;
+}
+
 .form-label-country {
   display: none;
 }
 
+.form-control-phone {
+  border-color: #999999;
+  border-width: 1px;
+  border-left: none !important;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  outline: none !important;
+}
+
+.form-dropdown-country {
+  position: relative;
+  margin-top: 22px;
+  height: 43px;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  border-color: #999999;
+  border-style: solid;
+  border-width: 1px;
+  border-right: none !important;
+  z-index: 1;
+}
+
+.form-dropdown-country::before {
+  position: absolute;
+  content: '';
+  min-height: 100%;
+  min-width: 100%;
+  width: 100%;
+  background: #F0F0F0;
+  z-index: -1;
+  border-radius: 16px;
+}
+
+.form-field-icon-country {
+  display: grid;
+  margin-top: 10px;
+  grid-template:
+    "icon field" /
+    24px auto;
+}
+
+.flow-frame-One .form {
+  display: grid;
+  grid-template:
+    "form-header form-header"
+    "name name"
+    "email email"
+    "country phone"
+    "optin optin"
+    "form-action form-action" /100px auto;
+}
+
+.form-header {
+  grid-area: form-header;
+}
+
+.form-field-name {
+  grid-area: name;
+}
+
+.form-field-email {
+  grid-area: email;
+}
+
+.form-field-icon-country {
+  grid-area: country;
+}
+
+.form-field-phone {
+  grid-area: phone;
+}
+
+.form-field-optin {
+  grid-area: optin;
+}
+
+.form-action {
+  grid-area: form-action;
+}
+
+.form-field-country {
+  grid-area: field;
+  width: 50px;
+
+}
+
+.form-icon-country {
+  grid-area: icon;
+  padding-left: 15px;
+
+}
+
+.form-message-country {
+  display: none;
+}
+
+.form-control-country {
+  outline: none;
+  border: none;
+  width: 50px;
+  background: #F0F0F0;
+  margin-left: 20px;
+}
+
+.form-dropdown-country .dropdown-list-open {
+  margin-top: 20px;
+}
+
+.form-message-phone {
+  margin-left: -100px;
+}
+
 .form-store-address {
   display: grid;
-  column-gap: 15px;
   grid-template:
     "header header"
     "cep cep"
@@ -95,6 +214,7 @@
 
 .form-dropdown-store-address-state {
   grid-area: state;
+  margin-right: 15px;
 }
 
 .form-dropdown-store-address-city {
@@ -107,6 +227,7 @@
 
 .form-field-store-address-number {
   grid-area: number;
+  margin-right: 15px;
 }
 
 .form-field-store-address-complement {
@@ -115,4 +236,8 @@
 
 .form-action-store-address {
   grid-area: action;
+}
+
+.dropdown-list-item-icon .svg-icon {
+  margin-right: 8px;
 }

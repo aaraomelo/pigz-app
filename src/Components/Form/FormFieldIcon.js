@@ -16,7 +16,11 @@ const FormFieldIcon = forwardRef((props, ref) => {
       ref={ref}
       className={generateClassName('form-field-icon', pointer)}
     >
-      <Icon />
+      <div
+        className={`form-icon ${generateClassName('form-icon', pointer)}`}
+      >
+        <Icon />
+      </div>
       <Form.Field {...props} />
     </div>
   );

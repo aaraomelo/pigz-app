@@ -15,9 +15,9 @@ export default function Dropdown({
       {children}
       <ul
         className={`dropdown-list dropdown-list-${open ? 'open' : 'close'}`}
-        style={{ width }}
+        style={{ width: width ? width - 32 : 0 }}
       >
-        {list.map(({ index, name, value, icon }) => {
+        {list.map(({ index, value, icon }) => {
           const Icon = !icon ? Fragment : icon
             .split('.')
             .reduce((acc, acv) => acc[acv], SVG);
@@ -27,7 +27,11 @@ export default function Dropdown({
               className={'dropdown-list-item'}
               onClick={select(index)}
             >
-              <Icon />
+              <div
+                className={'dropdown-list-item-icon'}
+              >
+                <Icon />
+              </div>
               {value}
             </li>
           )

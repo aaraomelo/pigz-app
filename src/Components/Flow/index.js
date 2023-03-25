@@ -1,4 +1,5 @@
 import React, { Children, Fragment } from 'react';
+import { numberNames } from '../../utils';
 import useStore from '../Hooks/useStore';
 import './Flow.css';
 
@@ -28,7 +29,10 @@ export default function Flow({ children, className = '', pointer }) {
       <div className={`flow-frames`}>
         {Children.map(children, (child, index) => (
           state !== index ? <Fragment key={index} /> :
-            <div key={index} className={'flow-frame'}>
+            <div
+              key={index}
+              className={`flow-frame flow-frame-${numberNames[index]}`}
+            >
               {child}
             </div>
         ))}
