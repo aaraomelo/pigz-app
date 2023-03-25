@@ -9,10 +9,10 @@ export default function FormMessage({ pointer, lang = 'pt', ...rest }) {
   );
   return (
     <p
-      className={generateClassName('form-message', pointer)}
+      className={`form-message ${generateClassName('form-message', pointer)}`}
       {...rest}
     >
-      {messages[0]}
+      {messages[0] ?? ''}
     </p>
   );
 }

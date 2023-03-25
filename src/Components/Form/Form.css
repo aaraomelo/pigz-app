@@ -1,0 +1,102 @@
+.form {
+  background: #FFFFFF;
+  color: #333333;
+  border-radius: 32px;
+  padding: 32px 24px 24px 24px;
+}
+
+.form-title,
+.form-subtitle {
+  margin: 0;
+}
+
+.form-title {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.form-subtitle {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.form-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  margin-bottom: 4px;
+}
+
+.form-control {
+  border-radius: 16px;
+  border: 1px solid #999999;
+  padding: 14px 16px;
+  width: -webkit-fill-available;
+}
+
+.form-control:focus-visible {
+  outline: 0.75px solid #999999;
+}
+
+.form-message {
+  margin: 0;
+  font-size: 10px;
+  color: #FA641E;
+  min-height: 16px;
+  margin-bottom: 4px;
+}
+
+.form-action {
+  background: #FA641E;
+  border-radius: 16px;
+  padding: 12px 0;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.form-store-address {
+  display: grid;
+  column-gap: 15px;
+  grid-template:
+    "header header"
+    "cep cep"
+    "state city"
+    "address address"
+    "number complement"
+    "action action" /
+    114px 1fr;
+}
+
+.form-header-store-address {
+  grid-area: header;
+}
+
+.form-field-store-address-cep {
+  grid-area: cep;
+}
+
+.form-dropdown-store-address-state {
+  grid-area: state;
+}
+
+.form-dropdown-store-address-city {
+  grid-area: city;
+}
+
+.form-field-store-address-address {
+  grid-area: address;
+}
+
+.form-field-store-address-number {
+  grid-area: number;
+}
+
+.form-field-store-address-complement {
+  grid-area: complement;
+}
+
+.form-action-store-address {
+  grid-area: action;
+}

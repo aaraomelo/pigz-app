@@ -5,7 +5,7 @@ export default function FormLabel({ pointer, ...rest }) {
   const { title } = useStore(pointer);
   return (
     <label
-      className={generateClassName('form-label', pointer)}
+      className={`form-label ${generateClassName('form-label', pointer)}`}
       {...rest}
     >
       {title}
