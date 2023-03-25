@@ -6,39 +6,45 @@ import useStore from "../Hooks/useStore";
 
 export default function FormDropdown({ pointer, ...rest }) {
   const field = useStore(pointer);
-  const { enum: en, state = '' } = field;
+  const { enum: en, state = '', icon = [] } = field;
   const [open, setOpen] = useState(false);
   const ref = useRef();
-  const dropdownControl = {
+  const control = {
     className: generateClassName('form-dropdown', pointer),
     open,
     list: en
       .map((value, index) => ({
         index,
         name: numberNames[index],
+        icon: icon[index],
         value
       }))
       .filter((item) => item.value.includes(state)),
-    select: (index) => {
+    select: (index) => () => {
       field[pointer] = {
         type: 'setFormField',
         payload: en[index]
       }
       setOpen(false);
     },
-    width: ref?.current?.offsetWidth
+    width: ref?.current?.offsetWidth,
+    ...rest,
+  }
+  const fieldControl = {
+    ref,
+    pointer,
+    onFocus: () => { setOpen(true) },
   }
   return (
-    <Dropdown
-      {...dropdownControl}
-      {...rest}
-    >
-      <Form.Field
-        ref={ref}
-        pointer={pointer}
-        onFocus={() => { setOpen(true) }}
-      />
-    </Dropdown>
+    <Dropdown {...control}>
+      {
+        icon ? (
+          <Form.FieldIcon {...fieldControl} />
+        ) : (
+          <Form.Field {...fieldControl} />
+        )
+      }
+    </Dropdown >
   );
 }
 

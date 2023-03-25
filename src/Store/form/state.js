@@ -23,6 +23,26 @@ export const FormInitialState = {
         "pattern": '^(([^<>()[\\]\\\\.,;:\\s@"]+(\\.[^<>()[\\]\\\\.,;:\\s@"]+)*)|.(".+"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$'
       }
     },
+    "country": {
+      "type": "string",
+      "title": "Código",
+      "description": "Código do país",
+      "mask": "countryCode",
+      "placeholder": "+55",
+      "state": "",
+      "validation": {
+        "required": true,
+      },
+      "inputType": "dropdown",
+      "enum": [
+        "55",
+        "11"
+      ],
+      "icon": [
+        "Icon.Flag.Brazilian",
+        "Icon.Flag.UnitedStates"
+      ]
+    },
     "phone": {
       "type": "string",
       "title": "Telefone",
@@ -32,6 +52,15 @@ export const FormInitialState = {
       "validation": {
         "required": true,
         "pattern": '^[1-9]{2}9[7-9]{1}[0-9]{3}[0-9]{4}$',
+      }
+    },
+    "optin": {
+      "type": "boolean",
+      "title": "Ao continuar, aceito que a Pigz entre em contato comigo por telefone, e-mail ou WhatsApp.",
+      "description": "Informativos da Pigz.",
+      "state": true,
+      "validation": {
+        "required": true
       }
     },
     "store": {

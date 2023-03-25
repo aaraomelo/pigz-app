@@ -46,6 +46,7 @@ export const mask = Object.assign({}, {
   cnpj: maskCNPJ,
   cep: maskCEP,
   phone: maskPhone,
+  countryCode: defaultMask,
   default: defaultMask,
 });
 
@@ -53,5 +54,6 @@ export const unmask = Object.assign({}, {
   cnpj: unmaskCNPJ,
   cep: unmaskCEP,
   phone: unmaskPhone,
+  countryCode: defaultMask,
   default: defaultMask,
 });

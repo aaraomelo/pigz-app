@@ -14,6 +14,7 @@ export default function FormObject({ pointer }) {
         <Form.Input
           key={property}
           inputType={data[property].inputType}
+          type={data[property].type}
           pointer={`${pointer}.properties.${property}`}
         />
       ))}
