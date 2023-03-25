@@ -40,13 +40,27 @@ function unmaskPhone(value) {
   return result
 }
 
+function maskCountryCode(value) {
+  var code = value
+    .substring(0, 3)
+    .replace(/\D/g, '');
+  return code.length ? `+${code}` : code;
+}
+
+function unmaskCountryCode(value) {
+  var code = value
+    .replace(/\D/g, '')
+    .substring(0, 2);
+  return code;
+}
+
 const defaultMask = (value) => value;
 
 export const mask = Object.assign({}, {
   cnpj: maskCNPJ,
   cep: maskCEP,
   phone: maskPhone,
-  countryCode: defaultMask,
+  countryCode: maskCountryCode,
   default: defaultMask,
 });
 
@@ -54,6 +68,6 @@ export const unmask = Object.assign({}, {
   cnpj: unmaskCNPJ,
   cep: unmaskCEP,
   phone: unmaskPhone,
-  countryCode: defaultMask,
+  countryCode: unmaskCountryCode,
   default: defaultMask,
 });

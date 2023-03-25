@@ -29,7 +29,7 @@ export const FormInitialState = {
       "description": "Código do país",
       "mask": "countryCode",
       "placeholder": "+55",
-      "state": "",
+      "state": "55",
       "validation": {
         "required": true,
       },

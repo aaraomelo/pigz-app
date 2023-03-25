@@ -1,12 +1,13 @@
 import { useRef, useState } from "react";
 import Form from ".";
+import { mask } from "../../Store/masks";
 import { generateClassName, numberNames } from "../../utils";
 import Dropdown from "../Dropdown";
 import useStore from "../Hooks/useStore";
 
 export default function FormDropdown({ pointer, ...rest }) {
   const field = useStore(pointer);
-  const { enum: en, state = '', icon = [] } = field;
+  const { enum: en, state = '', icon = [], mask: m } = field;
   const [open, setOpen] = useState(false);
   const ref = useRef();
   const control = {
@@ -17,7 +18,7 @@ export default function FormDropdown({ pointer, ...rest }) {
         index,
         name: numberNames[index],
         icon: icon[index],
-        value
+        value: m ? mask[m](value) : value
       }))
       .filter((item) => item.value.includes(state)),
     select: (index) => () => {

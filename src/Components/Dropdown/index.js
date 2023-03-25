@@ -10,7 +10,6 @@ export default function Dropdown({
   select,
   width,
 }) {
-
   return (
     <div className={`dropdown ${className}`}>
       {children}
@@ -32,9 +31,7 @@ export default function Dropdown({
               {value}
             </li>
           )
-        }
-
-        )}
+        })}
       </ul>
     </div>
   )
