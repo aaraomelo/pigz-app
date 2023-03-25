@@ -47,7 +47,7 @@ export const FormInitialState = {
               "type": "string",
               "title": "CEP",
               "description": "CEP",
-              "placeholder": "00000-00",
+              "placeholder": "00000-000",
               "mask": "cep",
               "validation": {
                 "required": true,
@@ -57,14 +57,13 @@ export const FormInitialState = {
               "$bind": {
                 "type": "object",
                 "description": "Conexão com o formulário de endereço",
-                "pointer": "form.properties.store.address",
+                "pointer": "form.properties.store.properties.address",
                 "properties": {
-                  "postalCode": "{cep}",
-                  "city": "{city}",
-                  "state": "{state}",
-                  "street": "{address}",
-                  "number": "{number}",
-                  "complement": "{complement}"
+                  "cep": "cep",
+                  "uf": "state",
+                  "localidade": "city",
+                  "logradouro": "address",
+                  "complemento": "complement"
                 }
               }
             },

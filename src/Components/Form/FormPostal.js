@@ -1,16 +1,19 @@
-import { useRef } from "react";
-import Form from ".";
-import { unmask } from "../../Store/masks";
-import useStore from "../Hooks/useStore";
+import { useEffect, useRef } from 'react';
+import Form from '.';
+import useStore from '../Hooks/useStore';
 
 export default function FormPostal(props) {
-  const { $bind } = useStore(props.pointer);
+  const field = useStore('form');
   const ref = useRef();
-  const value = unmask.cep(ref?.current?.value ?? '');
-  if (value.length === 8) {
-    console.log($bind);
-    console.log(value);
-  }
+  const payload = ref?.current?.value ?? '';
+  useEffect(() => {
+    if (payload.length === 9) {
+      field[props.pointer] = {
+        type: 'getAddress',
+        payload,
+      };
+    }
+  }, [payload.length]);
   return (
     <Form.Field ref={ref} {...props} />
   );

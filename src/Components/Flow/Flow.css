@@ -1,0 +1,22 @@
+.flow-pointers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.flow-pointer {
+    cursor: pointer;
+    width: 22%;
+    height: 4px;
+    border-radius: 8px;
+}
+
+.flow-pointer-active {
+    background: #FA641E;
+}
+
+.flow-pointer-desactive {
+    background: #EEEEEE;
+}

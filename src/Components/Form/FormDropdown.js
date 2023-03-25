@@ -1,13 +1,13 @@
-import { useRef, useState } from "react";
+import { Fragment, useRef, useState } from "react";
 import Form from ".";
 import { generateClassName, numberNames } from "../../utils";
 import Dropdown from "../Dropdown";
 import useStore from "../Hooks/useStore";
 
 export default function FormDropdown({ pointer, ...rest }) {
-  const { placeholder, enum: en } = useStore(pointer);
+  const field = useStore(pointer);
+  const { enum: en, state = '' } = field;
   const [open, setOpen] = useState(false);
-  const [state, setState] = useState('');
   const ref = useRef();
   const dropdownControl = {
     className: generateClassName('form-dropdown', pointer),
@@ -20,26 +20,24 @@ export default function FormDropdown({ pointer, ...rest }) {
       }))
       .filter((item) => item.value.includes(state)),
     select: (index) => {
-      setState(en[index])
+      field[pointer] = {
+        type: 'setFormField',
+        payload: en[index]
+      }
       setOpen(false);
     },
     width: ref?.current?.offsetWidth
   }
-
-  const inputControl = {
-    ref,
-    className: generateClassName('form-control', pointer),
-    placeholder,
-    value: state,
-    onChange: (e) => { setState(e.target.value) },
-    onFocus: () => { setOpen(true) },
-  }
-
   return (
-    <Dropdown {...dropdownControl}>
-      <Form.Label pointer={pointer} />
-      <Form.Control {...inputControl} />
-      <Form.Message pointer={pointer} />
+    <Dropdown
+      {...dropdownControl}
+      {...rest}
+    >
+      <Form.Field
+        ref={ref}
+        pointer={pointer}
+        onFocus={() => { setOpen(true) }}
+      />
     </Dropdown>
   );
 }

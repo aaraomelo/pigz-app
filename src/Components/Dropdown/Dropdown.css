@@ -1,0 +1,17 @@
+.dropdown {
+  color: #333333;
+  position: relative;
+}
+
+.dropdown-list-open {
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+  padding-inline-start: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.dropdown-list-close {
+  display: none;
+}

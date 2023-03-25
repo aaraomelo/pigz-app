@@ -7,6 +7,7 @@ import validations from "../validations";
 
 const setFormField = createAction(actionTypes.SET_FORM_FIELD);
 const updateForm = createAction(actionTypes.UPDATE_FORM);
+const bindForms = createAction(actionTypes.BIND_FORMS);
 
 export default createReducer(initialState,
   (builder) => {
@@ -15,6 +16,14 @@ export default createReducer(initialState,
         const field = proxySchema(state, pointer);
         field.state = unmask[field.mask ?? 'default'](value);
         validateField(field);
+      })
+      .addCase(bindForms, (state, { payload: { pointer: p, value } }) => {
+        const { $bind: { pointer, properties } } = proxySchema(state, p);
+        const schema = proxySchema(state, pointer);
+        Object.keys(properties).forEach((prop) => {
+          schema.properties[properties[prop]].state = value[prop]
+        });
+        reflect(state, state.state = {})
       })
       .addCase(updateForm, (state) => {
         reflect(state, state.state = {})
