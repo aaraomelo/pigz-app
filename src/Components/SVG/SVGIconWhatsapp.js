@@ -6,7 +6,7 @@ export class SVGIconWhatsapp extends React.Component {
     const { ...rest } = this.props;
     return (
       <SVGIcon
-        className="svg-icon-whatsapp"
+        className="svg-icon svg-icon-whatsapp"
         width="18"
         height="18"
         viewBox="0 0 18 18"

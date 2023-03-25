@@ -68,6 +68,10 @@
   font-weight: 600;
 }
 
+.form-label-country {
+  display: none;
+}
+
 .form-store-address {
   display: grid;
   column-gap: 15px;

@@ -6,7 +6,7 @@ export class SVGIconStorefront extends React.Component {
     const { ...rest } = this.props;
     return (
       <SVGIcon
-        className="svg-icon-storefront"
+        className="svg-icon svg-icon-storefront"
         width="72"
         height="72"
         viewBox="0 0 72 72"

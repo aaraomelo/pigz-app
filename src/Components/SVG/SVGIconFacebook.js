@@ -6,7 +6,7 @@ export class SVGIconFacebook extends React.Component {
     const { ...rest } = this.props;
     return (
       <SVGIcon
-        className="svg-icon-facebook"
+        className="svg-icon svg-icon-facebook"
         width="25"
         height="25"
         viewBox="0 0 25 25"

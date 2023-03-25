@@ -6,7 +6,7 @@ export class SVGIconFlagUnitedStates extends React.Component {
     const { scale = 0.046875, ...rest } = this.props;
     return (
       <SVGIcon
-        className="svg-icon-flag-united-states"
+        className="svg-icon svg-icon-flag-united-states"
         width={`${scale * 512}`}
         height={`${scale * 512}`}
         viewBox={`0 0 ${scale * 512} ${scale * 512}`}

@@ -6,7 +6,7 @@ export class SVGIconManagement extends React.Component {
     const { ...rest } = this.props;
     return (
       <SVGIcon
-        className="svg-icon-management"
+        className="svg-icon svg-icon-management"
         width="72"
         height="72"
         viewBox="0 0 72 72"

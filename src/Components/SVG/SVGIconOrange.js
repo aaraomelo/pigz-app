@@ -6,7 +6,7 @@ export class SVGIconOrange extends React.Component {
     const { scale = 1, ...rest } = this.props;
     return (
       <SVGIcon
-        className="svg-icon-Orange"
+        className="svg-icon svg-icon-Orange"
         width={`${scale * 69.694}`}
         height={`${scale * 20}`}
         viewBox={`0 0 ${scale * 69.694} ${scale * 20}`}

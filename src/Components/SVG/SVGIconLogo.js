@@ -6,7 +6,7 @@ export class SVGIconLogo extends React.Component {
     const { scale = 1, fill = "#fa641e", ...rest } = this.props;
     return (
       <SVGIcon
-        className="svg-icon-logo"
+        className="svg-icon svg-icon-logo"
         width={`${scale * 63.992}`}
         height={`${scale * 32}`}
         viewBox={`0 0 ${scale * 63.992} ${scale * 32}`}

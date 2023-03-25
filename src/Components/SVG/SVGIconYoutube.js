@@ -6,7 +6,7 @@ export class SVGIconYoutube extends React.Component {
     const { ...rest } = this.props;
     return (
       <SVGIcon
-        className="svg-icon-youtube"
+        className="svg-icon svg-icon-youtube"
         width="25"
         height="25"
         viewBox="0 0 25 25"

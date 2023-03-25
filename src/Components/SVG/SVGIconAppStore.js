@@ -6,7 +6,7 @@ export class SVGIconAppStore extends React.Component {
     const { ...rest } = this.props;
     return (
       <SVGIcon
-        className="svg-icon-app-store"
+        className="svg-icon svg-icon-app-store"
         width="89.748"
         height="30"
         viewBox="0 0 89.748 30"

@@ -6,7 +6,7 @@ export class SVGIconPhones extends React.Component {
     const { ...rest } = this.props;
     return (
       <SVGIcon
-        className="svg-icon-phones"
+        className="svg-icon svg-icon-phones"
         width="24"
         height="24"
         viewBox="0 0 24 24"

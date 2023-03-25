@@ -6,7 +6,7 @@ export class SVGIconPrint extends React.Component {
     const { ...rest } = this.props;
     return (
       <SVGIcon
-        className="svg-icon-print"
+        className="svg-icon svg-icon-print"
         width="72"
         height="72"
         viewBox="0 0 72 72"

@@ -6,7 +6,7 @@ export class SVGIconGooglePlay extends React.Component {
     const { ...rest } = this.props;
     return (
       <SVGIcon
-        className="svg-icon-google-play"
+        className="svg-icon svg-icon-google-play"
         width="102.25"
         height="31"
         viewBox="0 0 102.25 31"
