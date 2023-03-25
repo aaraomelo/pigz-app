@@ -1,5 +1,6 @@
 import './Form.css';
 import FormAction from "./FormAction";
+import FormCheck from './FormCheck';
 import FormControl from "./FormControl";
 import FormDropdown from "./FormDropdown";
 import FormField from "./FormField";
@@ -36,5 +37,6 @@ export default Object.assign(
     Subtitle: FormSubtitle,
     Header: FormHeader,
     Postal: FormPostal,
+    Check: FormCheck,
   }
 );

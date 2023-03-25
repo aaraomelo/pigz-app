@@ -6,11 +6,13 @@ import useStore from "../Hooks/useStore";
 
 const FormField = forwardRef(({ pointer, ...rest }, ref) => {
   const field = useStore(pointer);
+
   const {
     placeholder,
     state: value = '',
-    mask: m = 'default'
+    mask: m = 'default',
   } = field;
+
   const control = {
     value: mask[m](value),
     onChange: (e) => {
@@ -21,6 +23,7 @@ const FormField = forwardRef(({ pointer, ...rest }, ref) => {
       }
     },
     placeholder,
+    ...rest,
   };
   return (
     <div className={generateClassName('form-field', pointer)}>
@@ -29,7 +32,6 @@ const FormField = forwardRef(({ pointer, ...rest }, ref) => {
         ref={ref}
         className={generateClassName('form-control', pointer)}
         {...control}
-        {...rest}
       />
       <Form.Message pointer={pointer} />
     </div>
